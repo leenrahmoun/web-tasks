@@ -1,0 +1,153 @@
+
+.div1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    animation-name: change1 ;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    background-color: blue;
+}
+
+
+.div2{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 1800px;
+    top: 15%;
+    animation-name: change2 ;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-direction: reverse;
+    background-color: blue;
+}
+
+@keyframes change1{
+    0% {
+        left: 0;
+        /* background-color: yellowgreen; */
+        
+    }
+    100% {
+        left: 1800px;
+    }
+}
+
+
+@keyframes change2{
+    0% {
+        left: 0;
+        
+    }
+    100% {
+        left: 1800px;
+
+    }
+}
+
+.div3{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    animation-name: change3 ;
+    animation-duration: 2s;
+    animation-delay: 6s;
+    /* animation-play-state: running; */
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    /* animation-fill-mode: backwards; */
+    background-color: blue;
+}
+
+
+.div4{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 1800px;
+    top: 45%;
+    animation-name: change4 ;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 8s;
+    /* animation-play-state: running; */
+    animation-direction: reverse;
+    /* animation-fill-mode: backwards; */
+    background-color: blue;
+}
+
+@keyframes change3{
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 1800px;
+    }
+}
+
+
+@keyframes change4{
+    0% {
+        left: 0;
+        
+    }
+    100% {
+        left: 1800px;
+    }
+}
+.div5{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top:60%;
+    animation-name: change5 ;
+    animation-duration: 2s;
+    animation-delay: 10s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    background-color: blue;
+}
+
+
+.div6{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 1800px;
+    top: 75%;
+    animation-name: change6 ;
+    animation-duration: 2s;
+    animation-delay: 12s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    background-color: blue;
+}
+
+@keyframes change5{
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 1800px;
+
+    }
+}
+
+
+@keyframes change6{
+    0% {
+        left: 0;
+        
+    }
+    100% {
+        left: 1800px;
+    }
+}
