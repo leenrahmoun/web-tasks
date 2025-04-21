@@ -1,0 +1,173 @@
+/* Reset and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+/* Body Styling */
+body {
+    padding: 60px;
+    perspective: 700px; 
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f9; 
+}
+
+/* Container Styling */
+.container {
+    width: 1600px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    border: 2px dashed #ccc; 
+    margin: auto;
+    padding: 20px;
+}
+
+/* Card Parent */
+.parent {
+    width: 290px;
+    height: 390px;
+    margin: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+
+.parent:hover {
+    transform: rotateY(180deg);
+}
+
+.front-card,.back-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.front-card {
+    background-image: url(../images/img3.jpg); 
+    background-size: cover;
+    background-position: center;
+}
+.front-card2 {
+    background-image: url(../images/task7.png); 
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.front-card3 {
+    background-image: url(../images/SM-S926BZKDEUB_1_Classic.jpg); 
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+.front-card4 {
+    background-image: url(../images/samsung-galaxy-a13-blue-smart-phone-500x500.webp); 
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+.front-card5 {
+    background-image: url(../images/mobil14-500x500.webp); 
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+.front-card6 {
+    background-image: url(../images/mh.webp); 
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+.front-card7 {
+    background-image: url(../images/img4.webp); 
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+.front-card8 {
+    background-image: url(../images/41Fkd9aIodL._SL500_.jpg); 
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+.front-card9 {
+    background-image: url(../images/samsung_galaxy_a23_5g-one_one.jpg); 
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+.front-card10 {
+    background-image: url(../images/best-samsung-a-series-phones-5.jpg); 
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+
+
+.back-card {
+    transform: rotateY(180deg);
+    background-color: rgba(126, 136, 132, 0.8); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.back-card p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 0 10px;
+}
