@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Styled Signup/Login Form</title>
+  <style>
+    body {
+      background: #eafaff;
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      background-color: #327dff;
+      padding: 50px 50px 100px;
+      border-radius: 20px;
+      width: 320px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+
+    .form-container h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: none;
+      font-size: 15px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      background: white;
+      color: #327dff;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .login-section {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 60px;
+      background: white;
+      border-radius: 40% 40% 15px 15px / 30px 30px 15px 15px;
+      box-shadow: 0 -3px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.4s ease;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .login-section:hover {
+      width: 100%;
+      height: 380px;
+      border-radius: 60px 60px 20px 20px;
+    }
+
+    .login-section span {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #333;
+      font-weight: bold;
+      transition: bottom 0.3s, color 0.3s;
+    }
+
+    .login-form {
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      margin-top: 40px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .login-section:hover span {
+      bottom: 340px;
+      color: #327dff;
+    }
+
+    .login-section:hover .login-form {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.1s;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #327dff;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .forgot-password {
+      display: block;
+      font-size: 12px;
+      margin: 10px 0;
+      color: #327dff;
+      text-decoration: none;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #fff;
+      font-size: 13px;
+      gap: 8px;
+      margin: 15px 0 25px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .checkbox-container input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: #fff;
+      margin: 0;
+    }
+
+    .checkbox-container label {
+      flex: 1;
+      line-height: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container wrapper">
+    <div class="signup">
+      <h2 class="signup-header">Signup</h2>
+      <input type="text" class="fullName" placeholder="Full name" />
+      <input type="email" class="email" placeholder="Email address" />
+      <input type="password" class="password" placeholder="Password" />
+      <div class="checkbox-container">
+        <input type="checkbox" id="terms" required />
+        <label for="terms">I accept all terms & conditions</label>
+      </div>
+      <button id="btnsubmit">Signup</button>
+    </div>
+
+    <div class="login-section login">
+      <span class="login-header">Login</span>
+      <div class="login-form">
+        <input type="email" class="email_login" placeholder="Email address" />
+        <input type="password" class="password_login" placeholder="Password" />
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <button id="btnlogin">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let btnsubmit = document.querySelector('#btnsubmit');
+    let btnlogin = document.querySelector('#btnlogin');
+
+    let wrapper = document.querySelector(".wrapper");
+    let signupHeader = document.querySelector(".signup-header");
+    let loginHeader = document.querySelector(".login-header");
+
+    let fullName = document.querySelector('.fullName');
+    let email = document.querySelector('.email');
+    let password = document.querySelector('.password');
+
+    let email_login = document.querySelector('.email_login');
+    let password_login = document.querySelector('.password_login');
+
+    var userName = null;
+    var userEmail = null;
+    var userpassword = null;
+
+    let showLogin = () => {
+      wrapper.classList.add("active");
+    }
+
+    let showSignup = () => {
+      wrapper.classList.remove("active");
+    }
+
+    loginHeader.addEventListener("click", () => showLogin());
+    signupHeader.addEventListener("click", () => showSignup());
+
+    btnsubmit.addEventListener('click', () => {
+      if (fullName.value != '' && email.value != '' && password.value != '') {
+        alert('Welcome ' + fullName.value + ', your account has been created.');
+        userName = fullName.value;
+        userEmail = email.value;
+        userpassword = password.value;
+        showLogin();
+        fullName.value = '';
+        email.value = '';
+        password.value = '';
+      } else {
+        alert('Please fill in all fields.');
+      }
+    });
+
+    btnlogin.addEventListener('click', () => {
+      if (email_login.value != '' && password_login.value != '') {
+        if (email_login.value == userEmail && password_login.value == userpassword) {
+          alert('Welcome back ' + userName);
+          email_login.value = '';
+          password_login.value = '';
+        } else {
+          alert('Incorrect email or password');
+          email_login.value = '';
+          password_login.value = '';
+        }
+      } else {
+        alert('Please enter both email and password.');
+      }
+    });
+  </script>
+</body>
+</html>
